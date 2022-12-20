@@ -1,3 +1,9 @@
+### [0.0.3](https://github.com/BosenY/diff-image/compare/v0.0.2...v0.0.3) (2022-12-20)
+
+### 📃 文档
+
+- update md ([b4a8eb0](https://github.com/BosenY/diff-image/commit/b4a8eb07de4ec9729eaee5d4a25f1e930c5cea20))
+
 ### 0.0.2 (2022-12-20)
 
 ### 🧹 细节变动
