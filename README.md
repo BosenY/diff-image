@@ -1,3 +1,3 @@
-# node-library-template
+# diff-image
 
-一个使用 father 的标准 node 库模版
+Compare two images using pixelmatch.
