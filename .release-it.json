@@ -1,0 +1,44 @@
+{
+  "hooks": {
+    "before:init": ["rm -rf dist", "yarn build"]
+  },
+  "git": {
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false,
+    "changelog": "changelog -t $(git describe --abbrev=0 --tags) -f -",
+    "commitMessage": "chore(Release): v${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "Release v${version}",
+    "pushArgs": "--no-verify"
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "✨新功能"
+          },
+          {
+            "type": "fix",
+            "section": "🐞问题修复"
+          },
+          {
+            "type": "style",
+            "section": "🌈样式"
+          },
+          {
+            "type": "chore",
+            "section": "🧹细节变动"
+          },
+          {
+            "type": "docs",
+            "section": "📃文档"
+          }
+        ]
+      },
+      "infile": "CHANGELOG.md"
+    }
+  }
+}

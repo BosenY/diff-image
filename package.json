@@ -1,0 +1,52 @@
+{
+  "name": "node-library-template",
+  "version": "1.0.0",
+  "description": "node-library-template",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "author": "boseny",
+  "scripts": {
+    "dev": "father dev",
+    "demo": "node ./demo/index.js",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "prepublishOnly": "father doctor && npm run build",
+    "pub": "yarn publish",
+    "release": "release-it"
+  },
+  "license": "ISC",
+  "files": [
+    "dist",
+    "compiled"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^5.1.1",
+    "@types/node": "^18.11.15",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "father": "^4.1.1",
+    "git-last-commit": "^1.0.1",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "release-it": "*",
+    "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "mime-types": "^2.1.35",
+    "node-fetch": "^2.6.7"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  }
+}
