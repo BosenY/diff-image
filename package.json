@@ -1,10 +1,12 @@
 {
   "name": "diff-image",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Compare two images using pixelmatch.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "boseny",
+  "authors": [
+    "boseny <yxy43445@gmail.com> (https://github.com/BosenY)"
+  ],
   "scripts": {
     "dev": "father dev",
     "demo": "vite",
@@ -14,12 +16,17 @@
     "pub": "yarn publish",
     "release": "release-it"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BosenY/diff-image"
+  },
   "license": "ISC",
   "files": [
     "dist",
     "compiled"
   ],
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
