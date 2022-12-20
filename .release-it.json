@@ -2,6 +2,9 @@
   "hooks": {
     "before:init": ["rm -rf dist", "yarn build"]
   },
+  "npm": {
+    "publish": true
+  },
   "git": {
     "requireCleanWorkingDir": false,
     "requireUpstream": false,
